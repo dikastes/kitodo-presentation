@@ -50,8 +50,6 @@ dlfScoreUtil.fetchScoreDataFromServer = function(url, pagebeginning) {
             console.log('pageToShow: ' + pageToShow);
             score = tk.renderToSVG(pageToShow);
 
-            console.log("this is url " + url)
-
             $("#player").midiPlayer();
 
             //console.log(dlfScoreUtils.get_play_midi);
@@ -164,7 +162,6 @@ function get_pdf_title(tk){
  */
 dlfViewerScoreControl.prototype.loadScoreData = function (scoreData, tk) {
 	const target = document.getElementById('tx-dlf-score');
-
   const map = new ol.Map({
     target: target,
     view: new ol.View({
@@ -184,6 +181,7 @@ dlfViewerScoreControl.prototype.loadScoreData = function (scoreData, tk) {
   });
 
   const svgContainer = document.createElement('div');
+  console.log("score data " + scoreData)
   svgContainer.innerHTML = scoreData;
 
   const width = 2100;

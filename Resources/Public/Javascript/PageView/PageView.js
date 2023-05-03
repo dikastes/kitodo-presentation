@@ -217,7 +217,7 @@ dlfViewer.prototype.countPages = function () {
  * @param {Array.<string>} controlNames
  */
 dlfViewer.prototype.addCustomControls = function() {
-    var fulltextControl = undefined,
+        var fulltextControl = undefined,
         fulltextDownloadControl = undefined,
 		scoreControl = undefined,
         annotationControl = undefined,
@@ -248,6 +248,9 @@ dlfViewer.prototype.addCustomControls = function() {
 
      .then (function (scoreData) {
        scoreControl.loadScoreData(scoreData, tk)
+       console.log("test2 " + tk)
+
+
      })
     .catch(function () {
       scoreControl.deactivate();
